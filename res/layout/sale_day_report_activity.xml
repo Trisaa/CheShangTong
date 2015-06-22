@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/salereport_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/salereport_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <RelativeLayout
+            android:id="@id/xiaoshou_top_selection_type"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="销售日报"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp" />
+
+            <ImageView
+                android:id="@id/main_top_more"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/name_tv"
+                android:src="@drawable/downarrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/salereport_topbar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@id/tabhost_topbar"
+                android:layout_width="fill_parent"
+                android:layout_height="58.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:gravity="center" >
+
+                <RadioGroup
+                    android:id="@id/salereport_radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38.0dip"
+                    android:layout_centerInParent="true"
+                    android:background="#ffffffff"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@id/dayreport"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_style_radiobutton_header"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="用户报告"
+                        android:textColor="@color/color_radiobutton" />
+
+                    <RadioButton
+                        android:id="@id/seasonreport"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_style_radiobutton_tail"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="业务报告"
+                        android:textColor="@color/color_radiobutton" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:tabStripEnabled="false"
+                android:visibility="gone" />
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

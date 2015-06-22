@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/reportItemlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@id/lName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#ff333333"
+            android:textSize="17.0sp" />
+
+        <TextView
+            android:id="@id/lYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="1"
+            android:singleLine="true"
+            android:textColor="@color/xubaocolor_radiobutton"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/taici"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/lYear"
+            android:ellipsize="end"
+            android:focusableInTouchMode="true"
+            android:text="台"
+            android:marqueeRepeatLimit="1"
+            android:singleLine="true"
+            android:textColor="#ff333333"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:ellipsize="end"
+            android:text="台"
+            android:singleLine="true"
+            android:textColor="#ff333333"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/datetaici"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/date"
+            android:ellipsize="end"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="1"
+            android:singleLine="true"
+            android:textColor="@color/xubaocolor_radiobutton"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+</LinearLayout>

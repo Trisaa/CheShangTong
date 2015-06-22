@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/ll_group"
+        android:layout_width="120.0dip"
+        android:layout_height="216dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pop_menu_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@id/selection_one"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@color/devide_line" />
+
+        <TextView
+            android:id="@id/selection_two"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="待处理"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@color/devide_line" />
+
+        <TextView
+            android:id="@id/selection_three"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="已报价"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@color/devide_line" />
+        
+        <TextView
+            android:id="@id/selection_four"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="已购买"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+        
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@color/devide_line" />
+
+        <TextView
+            android:id="@id/selection_five"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="无效询价"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

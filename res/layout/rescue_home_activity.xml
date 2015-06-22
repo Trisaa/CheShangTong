@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@id/buttom_bar_group"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout style="@style/ButtomBar" >
+
+            <ImageButton
+                android:id="@id/buttom_index"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_rescue"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@id/index_new_message_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@id/buttom_index"
+                android:layout_gravity="top|center"
+                android:background="@drawable/icon_invite_num"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/ButtomBar" >
+
+            <ImageButton
+                android:id="@id/buttom_customer"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_comment"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@id/sale_new_message_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@id/buttom_customer"
+                android:layout_gravity="top|center"
+                android:background="@drawable/icon_invite_num"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/ButtomBar" >
+
+            <ImageButton
+                android:id="@id/buttom_setting"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_setting"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@id/setting_new_message_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@id/buttom_setting"
+                android:layout_gravity="top|center"
+                android:background="@drawable/icon_invite_num"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="12.0sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_above="@id/buttom_bar_group"
+        android:background="@color/devide_line" />
+
+    <FrameLayout
+        android:id="@id/fl_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/line" />
+
+</RelativeLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/performance_model"
+    android:minWidth="300.0dip"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/dialog_top"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@id/dialog_titleicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/add_avator"
+            android:paddingLeft="5.0dip" />
+
+        <TextView
+            android:id="@id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="@string/tips"
+            android:textColor="#ff000000"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/dialog_contentPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:paddingBottom="15.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="15.0dip">
+
+        <TextView
+            android:id="@id/dialog_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#ff444444" />
+
+        <EditText
+            android:id="@id/dlg_setday"
+            android:layout_width="50.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90.0dip"
+            android:background="@drawable/login_edit_normal"
+            android:gravity="center"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="17.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/dialog_setmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="日提醒一次"
+            android:textColor="#ff444444"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/dialog_contentnameEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:paddingBottom="15.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="15.0dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@id/dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="姓名"
+            android:textColor="#ff444444" />
+
+        <EditText
+            android:id="@id/dlg_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/login_edit_normal"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/dialog_contenttelEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0px"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:paddingBottom="15.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@id/dialog_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="电话"
+            android:textColor="#ff444444" />
+
+        <EditText
+            android:id="@id/dlg_tel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/login_edit_normal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left|center"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@id/dialog_customPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <FrameLayout
+            android:id="@android:attr/theme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="#ffcacaca" />
+
+    <LinearLayout
+        android:id="@id/dialog_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@id/dialog_leftspacer"
+            android:layout_width="0.0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@id/dialog_negativebutton"
+            android:layout_width="0.0px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/dialog_btn_selector_left"
+            android:maxLines="2"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:singleLine="true"
+            android:textColor="#ff3b579d"
+            android:textSize="16.0sp" />
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:background="#ffcacaca" />
+
+        <Button
+            android:id="@id/dialog_positivebutton"
+            android:layout_width="0.0px"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@drawable/dialog_btn_selector_right"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:singleLine="true"
+            android:textColor="#ff3b579d"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:id="@id/dialog_rightspacer"
+            android:layout_width="0.0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

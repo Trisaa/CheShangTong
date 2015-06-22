@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/group_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    android:background="@drawable/list_serviceguestselector_color" >
+
+    <ImageView
+        android:id="@id/group_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14.0dip"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/qb_right" />
+
+    <TextView
+        android:id="@id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50.0dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="44.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_toLeftOf="@id/online_count"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:includeFontPadding="false"
+        android:maxEms="11"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="#ff444444"
+        android:textSize="15.0sp" />
+
+    <ImageView
+        android:id="@id/noticeset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="95.0dip"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/alarm_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@id/contact_count"
+        android:layout_width="wrap_content"
+        android:layout_height="50.0dip"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#ff9e9e9e"
+        android:textSize="12.0sp" />
+
+    <TextView
+        android:id="@id/online_count"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10.0dip"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#ff9e9e9e"
+        android:textSize="12.0sp" />
+
+</RelativeLayout>

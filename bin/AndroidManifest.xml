@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.university.cheshangguanjia"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="com.cheshangguanjia.application.EvoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Cq7Ul7Fh57LlGuA2yG265DgT" />
+
+        <activity
+            android:name="com.cheshangguanjia.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoxianGenjinActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.RescueMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.RescueHistoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.RescureHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.XubaoXunjiaActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.GouCheXunJiaDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoyangTixingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoxianTouBaoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoxianHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.JIazhaoTixingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.CheliangXinxiActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.SaleManagerHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.XubaoTixingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.NianjianTixingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.AfterSaleManagerHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoxianXubaoxunjiaActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.SalerHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerSaleReportActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerCommentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerFeedBackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerGuestDataActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ManagerGuestBasicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.BaoxianZiliaoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.EditGuestDataActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.SelectDccActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.FollowUPRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.AskPriceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.TestCarActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.DrawPriceRecordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.PriceDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.GuestRankActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.SaleDayReportActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.PersonInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.FixPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.MyMessagesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.MyMessagesDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.FixNoticeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ReportNowActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.QianKeListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.FenPeiKehuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.GouCheXunjiaActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ShiJiaYuyueActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.CustomerDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ShiJiaYuyueDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.XiaoShouDianpingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ZhongJiangMingDanActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.QiangKehuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.ServiceGuwenHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.cheshangguanjia.activity.KeFuHomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- <activity
+            android:name="com.cheshangguanjia.activity.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity> -->
+    </application>
+
+</manifest>

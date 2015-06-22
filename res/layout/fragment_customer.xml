@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <Button
+            android:id="@id/noticeuserbutton"
+            android:layout_width="90.0dip"
+            android:layout_height="40.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="left|center"
+            android:paddingLeft="10.0dip"
+            android:text="今/0"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/newfeedbackicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/noticeuserbutton"
+            android:layout_marginLeft="55.0dip"
+            android:src="@drawable/tipsimage"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="潜客列表"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_style_addbutton"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/layout_sign"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:background="@drawable/guestsortnotice_bg"
+        android:clickable="false"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@id/clearcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/input_box_clear"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@id/history_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@id/clearcontent"
+            android:text="“亲，以后客户列表都将按跟进时间显示哦！”"
+            android:textColor="#ff444444"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/searchlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_sign"
+        android:background="@drawable/textbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@id/editTextName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/search_bar_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:id="@id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/search_bar_icon_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:text="搜索"
+                android:textColor="#ff9f9f9f"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/editTextName"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/input_box_clear"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/main_company_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_below="@id/searchlayout"
+        android:background="@drawable/btn_style_setting_click_button"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/company_item_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:textColor="#ff3b579d"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@id/okbutton"
+            android:layout_width="80.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_style_commitbutton"
+            android:gravity="center"
+            android:text="抢客户"
+            android:textColor="#ffffffff"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/sortlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="58.0dip"
+        android:layout_below="@id/main_company_layout"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:focusableInTouchMode="true" >
+
+        <RadioGroup
+            android:id="@id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@id/main_tab_tel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_header"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/color_radiobutton" />
+
+            <RadioButton
+                android:id="@id/main_tab_time"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_mid"
+                android:button="@null"
+                android:gravity="center"
+                android:text="按车型"
+                android:textColor="@color/color_radiobutton" />
+
+            <RadioButton
+                android:id="@id/main_tab_rank"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_tail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="按等级"
+                android:textColor="@color/color_radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/sortlayout"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@id/gapview"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/shape_line" />
+
+        <ExpandableListView
+            android:id="@id/salereport_item_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/gapview"
+            android:cacheColorHint="#00000000"
+            android:childDivider="@drawable/child_bg"
+            android:divider="#ffcecfce"
+            android:dividerHeight="0.5dip"
+            android:fadingEdge="vertical"
+            android:groupIndicator="@null"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/nodata_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sortlayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90.0dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/reply_item_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/noreply"
+            android:textColor="#ffdcdadb"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/nodata_iv"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@id/reply_item_empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/nodata_image" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

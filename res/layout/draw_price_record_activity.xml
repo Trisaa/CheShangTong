@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="中奖名单"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/layout_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:background="@drawable/textbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@id/editTextsearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/search_bar_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:id="@id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/search_bar_icon_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:text="搜索"
+                android:textColor="#ff9f9f9f"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@id/btn_clear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignRight="@id/editTextsearch"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/input_box_clear"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/reply_item_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:text="@string/noreply"
+        android:textColor="#ff999999"
+        android:textSize="14.0sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_edit"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@id/winner_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="#fff0f0f0"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/winnername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="   姓名"
+                android:textColor="#ff000000"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:id="@id/winnerprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:src="@drawable/login_user_icon" />
+        </RelativeLayout>
+
+        <com.cheshangguanjia.view.XListView
+            android:id="@+id/winnerlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/winner_ll"
+            android:scrollbars="none" />
+
+        <ProgressBar
+            android:id="@id/login_processbar"
+            style="@style/newProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

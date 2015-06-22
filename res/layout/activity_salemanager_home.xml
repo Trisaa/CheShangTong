@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/buttom_bar_group" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton android:id="@id/buttom_index" android:background="@drawable/bar_index" android:contentDescription="@string/app_name" style="@style/ButtomBarImgBtn" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="top|center" android:id="@id/index_new_message_count" android:background="@drawable/icon_invite_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/buttom_index" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton android:id="@id/buttom_customer" android:background="@drawable/bar_customer" android:contentDescription="@string/app_name" style="@style/ButtomBarImgBtn" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="top|center" android:id="@id/sale_new_message_count" android:background="@drawable/icon_invite_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/buttom_customer" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton android:id="@id/buttom_aftersale" android:background="@drawable/bar_reporttable" android:contentDescription="@string/app_name" style="@style/ButtomBarImgBtn" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="top|center" android:id="@id/aftersale_new_message_count" android:background="@drawable/icon_invite_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/buttom_aftersale" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton android:id="@id/buttom_setting" android:background="@drawable/bar_setting" android:contentDescription="@string/app_name" style="@style/ButtomBarImgBtn" />
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="top|center" android:id="@id/setting_new_message_count" android:background="@drawable/icon_invite_num" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/buttom_setting" android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:id="@id/line" android:background="@color/devide_line" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_above="@id/buttom_bar_group" />
+    <FrameLayout android:id="@id/fl_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/line" />
+</RelativeLayout>

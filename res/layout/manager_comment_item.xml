@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/moreclick"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@id/picture"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="10.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_head" />
+
+        <TextView
+            android:id="@id/new_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@id/picture"
+            android:layout_gravity="top|center"
+            android:background="@drawable/icon_invite_num"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="10.0sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/picture"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:textColor="#ff717171" />
+
+            <TextView
+                android:id="@id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toLeftOf="@id/time"
+                android:ellipsize="end"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/guwen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#ffafafaf"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@id/comment_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/guwen"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="16.0sp" />
+
+            <ImageView
+                android:id="@id/morearrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/comment_level"
+                android:layout_below="@id/guwen"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toLeftOf="@id/comment_level"
+                android:src="@drawable/arrow_down"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/guwen"
+                android:layout_below="@id/guwen"
+                android:layout_marginRight="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_toLeftOf="@id/morearrow"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#ffafafaf"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

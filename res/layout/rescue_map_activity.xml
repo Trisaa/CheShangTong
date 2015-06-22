@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="紧急救援"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <ImageButton
+            android:id="@id/nextto"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_rescuebutton" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/mapll"
+        android:layout_width="fill_parent"
+        android:layout_height="150.0dip"
+        android:layout_below="@id/layout_top" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapll"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@id/type_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <RelativeLayout
+                android:id="@id/arrive_view"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@id/arrive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="预计到达 "
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@id/arrive_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="28.0dip"
+                    android:layout_toRightOf="@id/arrive"
+                    android:text=""
+                    android:textColor="#ffafafaf"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/pic_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:text="车主姓名"
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_toRightOf="@id/name"
+                        android:paddingBottom="10.0dip"
+                        android:text=""
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/carstyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车         型 "
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/carstyle_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="22.0dip"
+                        android:layout_toRightOf="@id/carstyle"
+                        android:text=""
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/chepai_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/chepai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车牌号码"
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/chepai_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_toRightOf="@id/chepai"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/phone_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="联系电话"
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_toRightOf="@id/phone"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:id="@id/callphoneicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/btn_style_callphone_button" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/place_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:text="求援地址"
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/place_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:layout_toRightOf="@id/place"
+                        android:paddingBottom="10.0dip"
+                        android:text="sa"
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/rescue_history_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/rescue_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:text="救援记录"
+                        android:textColor="#ff444444"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/rescue_history_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="35.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:paddingBottom="10.0dip"
+                        android:text=""
+                        android:textColor="#ffafafaf"
+                        android:textSize="17.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/direction" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@id/fix_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@id/okbutton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12.0dip"
+                        android:layout_marginRight="12.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_style_commitbutton"
+                        android:gravity="center"
+                        android:text="确认处理"
+                        android:textColor="#ffffffff"
+                        android:textSize="20.0sp" />
+
+                    <Button
+                        android:id="@id/cancelbutton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12.0dip"
+                        android:layout_marginRight="12.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/btn_style_cancelbutton"
+                        android:gravity="center"
+                        android:text="不处理"
+                        android:textColor="#ff444444"
+                        android:textSize="20.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/yet_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@id/yetbutton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12.0dip"
+                        android:layout_marginRight="12.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/btn_style_okbutton"
+                        android:gravity="center"
+                        android:text="完成救援"
+                        android:textColor="#ffffffff"
+                        android:textSize="20.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

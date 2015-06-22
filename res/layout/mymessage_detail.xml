@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <Button
+            android:id="@id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_style_sharebutton"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@id/addbutton"
+            android:layout_toRightOf="@id/goback"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="消息详情"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/userinfo"
+        android:background="#ffffffff"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@id/type_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" />
+    </ScrollView>
+
+    <WebView
+        android:id="@id/functionwebview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/userinfo" />
+
+    <RelativeLayout
+        android:id="@id/nodata_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinfo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90.0dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/reply_item_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/noreply"
+            android:textColor="#ffdcdadb"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/nodata_iv"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@id/reply_item_empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/nodata_image" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15.0dip"
+        android:indeterminate="false"
+        android:visibility="invisible" />
+
+</RelativeLayout>

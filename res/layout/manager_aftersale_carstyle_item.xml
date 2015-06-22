@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/main_company_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="85.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@id/fanslayout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_fans_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ff444444"
+                android:textSize="17.0sp" />
+
+            <TextView
+                android:id="@id/company_item_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_fans_text"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffffff"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_customers_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#ff3b579d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_binds_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#ff3b579d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

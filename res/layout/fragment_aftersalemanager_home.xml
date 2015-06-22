@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/salereport_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <TextView
+            android:id="@id/salereport_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="客户管理"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/nextto"
+            android:layout_width="58dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/btn_style_xiaoshoumanagerbutton" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/main_company_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_below="@id/salereport_topbar"
+        android:background="@drawable/report_top_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@id/fanslayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_fans_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_fans"
+                android:layout_centerHorizontal="true"
+                android:text="车主"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_customers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_customers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_customers"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="匹配"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/guestlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_binds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_binds_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_binds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="注册"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/carstylelayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_carstyle_binds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_carstyle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_carstyle_binds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="解除"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@id/tabhost_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="58.0dip"
+        android:layout_below="@id/main_company_layout"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip" >
+
+        <RadioGroup
+            android:id="@id/salereport_radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@id/dayreport"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_header"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="SA排行"
+                android:textColor="@color/color_radiobutton" />
+
+            <RadioButton
+                android:id="@id/seasonreport"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_tail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="车型排行"
+                android:textColor="@color/color_radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@id/aftersalemanagerhome_child_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tabhost_topbar" />
+
+</RelativeLayout>

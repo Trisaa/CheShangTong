@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg">
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="跟进记录"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_top"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@id/jilulistView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/genjinjilu"
+            android:dividerHeight="1.0dip"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:scrollingCache="false" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+</RelativeLayout>

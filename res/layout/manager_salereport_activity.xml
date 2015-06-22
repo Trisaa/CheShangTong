@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/salereport_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/salereport_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/salereport_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/salereport_title"
+            android:textColor="@android:color/white"
+            android:textSize="20.0dip" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/salereport_topbar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@id/tabhost_topbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip" >
+
+                    <RadioGroup
+                        android:id="@id/salereport_radiogroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="42.0dip"
+                        android:background="#ffffffff"
+                        android:gravity="top"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@id/dayreport"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:button="@null"
+                            android:checked="true"
+                            android:gravity="center"
+                            android:text="日报"
+                            android:textColor="@color/xubaocolor_radiobutton" />
+
+                        <RadioButton
+                            android:id="@id/monthreport"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="月报"
+                            android:textColor="@color/xubaocolor_radiobutton" />
+
+                        <RadioButton
+                            android:id="@id/seasonreport"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="季报"
+                            android:textColor="@color/xubaocolor_radiobutton" />
+                    </RadioGroup>
+
+                    <View
+                        android:id="@id/viewgap"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@id/salereport_radiogroup"
+                        android:background="#ff3b579d" />
+
+                    <ImageView
+                        android:id="@id/tab_top_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/viewgap"
+                        android:src="@drawable/triangle" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

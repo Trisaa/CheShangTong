@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@id/main_company_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:background="@drawable/report_top_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@id/fanslayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_fans_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_fans"
+                android:layout_centerHorizontal="true"
+                android:text="车主"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_customers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_customers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_customers"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="匹配"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/guestlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_binds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_item_binds_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_item_binds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="注册"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="60.0dip"
+            android:background="@color/devide_line" />
+
+        <RelativeLayout
+            android:id="@id/carstylelayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_carstyle_binds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15.0dip"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/company_carstyle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_carstyle_binds"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="解除"
+                android:textColor="#ff7d7d7d"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/main_company_layouts"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@id/main_company_layout"
+        android:background="@drawable/report_top_back"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@id/fanslayouts"
+            android:layout_width="70.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_fans_texts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="姓名"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayouts"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_customers_texts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="客户数"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayouts"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <TextView
+                android:id="@id/company_item_binds_texts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="流失数"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.cheshangguanjia.view.XListView
+        android:id="@id/callListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/main_company_layouts"
+        android:scrollbars="none" />
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@id/nodata_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_company_layouts"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90.0dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@id/reply_item_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/noreply"
+            android:textColor="#ffdcdadb"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/nodata_iv"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@id/reply_item_empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/nodata_image" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:id="@+id/selectionview"
+        android:background="@drawable/list_selector_color"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@id/picture"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:src="@drawable/no_head"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:textSize="16.0sp"
+            android:textColor="#ffffffff"
+            android:id="@id/okbutton"
+            android:background="@drawable/checked"
+            android:clickable="false"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="#ff444444"
+            android:ellipsize="end"
+            android:id="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/okbutton"
+            android:layout_toRightOf="@id/picture"
+            android:layout_alignTop="@id/picture" />
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ffc6c6c6"
+            android:ellipsize="end"
+            android:id="@id/lContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/okbutton"
+            android:layout_toRightOf="@id/picture"
+            android:layout_below="@id/name"
+            android:layout_alignBottom="@id/picture" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:layout_centerInParent="true"
+        style="@style/newProgressBar" />
+</RelativeLayout>

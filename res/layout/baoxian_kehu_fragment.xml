@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg">
+
+        <TextView
+            android:id="@id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="客户列表"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/searchlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_top"
+        android:background="@drawable/textbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@id/editTextName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/search_bar_edit_bg"
+            android:focusable="true"
+            android:hint="搜索"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <Button
+            android:id="@id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/editTextName"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/input_box_clear"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/sortlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="58.0dip"
+        android:layout_below="@id/searchlayout"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:focusableInTouchMode="true">
+
+        <RadioGroup
+            android:id="@id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@id/main_tab_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_header"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/color_radiobutton" />
+
+            <RadioButton
+                android:id="@id/main_tab_xubao"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_style_radiobutton_tail"
+                android:button="@null"
+                android:gravity="center"
+                android:text="续保到期"
+                android:textColor="@color/color_radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/nodata_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sortlayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90.0dip"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@id/reply_item_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/noreply"
+            android:textColor="#ffdcdadb"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/nodata_iv"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_below="@id/reply_item_empty"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15.0dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/nodata_image" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/sortlayout"
+        android:orientation="vertical">
+
+        <View
+            android:id="@id/gapviewtop"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="#ffe6e6e6"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/guestcount"
+            android:layout_width="wrap_content"
+            android:layout_height="20.0dip"
+            android:layout_below="@id/gapviewtop"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ff000000"
+            android:visibility="gone" />
+
+        <View
+            android:id="@id/gapview"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_below="@id/guestcount"
+            android:background="#ffe6e6e6" />
+
+        <ExpandableListView
+            android:id="@id/salereport_item_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/gapview"
+            android:cacheColorHint="#00000000"
+            android:childDivider="@drawable/child_bg"
+            android:divider="#ffcecfce"
+            android:dividerHeight="0.5dip"
+            android:fadingEdge="vertical"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+</RelativeLayout>

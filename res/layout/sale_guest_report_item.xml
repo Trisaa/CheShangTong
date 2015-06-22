@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/main_company_layout"
+        android:background="@drawable/report_top_back"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <RelativeLayout
+            android:id="@id/fanslayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center"
+                android:id="@id/company_item_fans_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff444444"
+                android:id="@id/company_item_customers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="新增"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff444444"
+                android:id="@id/company_item_binds_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="总数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/main_company_layout_one"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <RelativeLayout
+            android:id="@id/fanslayout_one"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center"
+                android:id="@id/company_item_fans_text_one"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="潜客总数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout_one"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:gravity="center"
+                android:id="@id/company_item_customers_text_one"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:text="客户数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout_one"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:gravity="center"
+                android:id="@id/company_item_binds_text_one"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10.0dip"
+                android:text="成交"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/main_company_layout_two"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <RelativeLayout
+            android:id="@id/fanslayout_two"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center"
+                android:id="@id/company_item_fans_text_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有顾问数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout_two"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_customers_text_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="客户数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout_two"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_binds_text_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="成交"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/main_company_layout_three"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <RelativeLayout
+            android:id="@id/fanslayout_three"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center"
+                android:id="@id/company_item_fans_text_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有车型数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout_three"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_customers_text_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="客户数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout_three"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_binds_text_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="成交"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/main_company_layout_four"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip">
+
+        <RelativeLayout
+            android:id="@id/fanslayout_four"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="#ff444444"
+                android:gravity="center"
+                android:id="@id/company_item_fans_text_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有电话数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestcarlayout_four"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_customers_text_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="客户数"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@id/guestlayout_four"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:textSize="18.0sp"
+                android:textColor="#ff3b579d"
+                android:id="@id/company_item_binds_text_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="成交"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

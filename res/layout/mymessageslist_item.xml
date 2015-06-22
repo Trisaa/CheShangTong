@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginTop="5.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="20.0sp" />
+
+        <ImageView
+            android:id="@id/newversionicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/name"
+            android:layout_toRightOf="@id/name"
+            android:src="@drawable/tipsimage"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#ff717171"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

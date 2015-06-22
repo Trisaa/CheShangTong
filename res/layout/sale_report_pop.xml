@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/ll_group"
+        android:background="@drawable/pop_menu_bg"
+        android:layout_width="120.0dip"
+        android:layout_height="130.0dip"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:textSize="20.0sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/selection_one"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginTop="10.0dip"
+            android:text="销售日报" />
+
+        <View
+            android:background="@color/devide_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+
+        <TextView
+            android:textSize="20.0sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/selection_two"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:text="销售月报" />
+
+        <View
+            android:background="@color/devide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip" />
+
+        <TextView
+            android:textSize="20.0sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@id/selection_three"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:text="销售季报" />
+    </LinearLayout>
+</RelativeLayout>

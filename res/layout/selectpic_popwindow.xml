@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:alpha="0.9"
+    android:background="#60000000">
+
+    <LinearLayout
+        android:id="@id/ll_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/pop_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@id/administration_function_photograph"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:text="相机拍摄"
+            android:textColor="#ff3b579d"
+            android:textSize="16.0sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:alpha="0.5"
+            android:background="@color/devide_line" />
+
+        <TextView
+            android:id="@id/administration_function_photochoice"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:text="手机相册"
+            android:textColor="#ff3b579d"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/administration_function_photocancel"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_below="@id/ll_exit"
+        android:layout_margin="10.0dip"
+        android:background="@drawable/pop_bg"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#fff43e2b"
+        android:textSize="16.0sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/administration_function_photocancel"
+        android:layout_marginTop="5.0dip" />
+</RelativeLayout>

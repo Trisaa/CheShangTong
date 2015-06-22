@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+    android:paddingTop="12dp" >
+
+    <ImageView
+        android:id="@+id/price_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/paper" />
+
+    <TextView
+        android:id="@+id/price_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/price_paper"
+        android:text="2瓶防冻玻璃水20元" />
+
+    <ImageView
+        android:id="@+id/price_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/right_unarrow" />
+
+    <TextView
+        android:id="@+id/price_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/price_arrow"
+        android:text="2015/04/23"
+        android:textColor="@color/color_text_gray" />
+
+</RelativeLayout>

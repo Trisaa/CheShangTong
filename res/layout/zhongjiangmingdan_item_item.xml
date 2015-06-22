@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@id/onelevel_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_style_setting_click_button"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@id/onelevelicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/present" />
+
+        <TextView
+            android:id="@id/onelevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@id/onelevelicon"
+            android:singleLine="true"
+            android:text="一等奖"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/onelevelprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="500"
+            android:textColor="#ffe79a42"
+            android:textSize="14.0sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@id/oneleveldirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:src="@drawable/direction" />
+
+        <TextView
+            android:id="@id/oneleveldatetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:layout_toLeftOf="@id/oneleveldirection"
+            android:singleLine="true"
+            android:text="1216515646545"
+            android:textColor="#ff919191"
+            android:textSize="14.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

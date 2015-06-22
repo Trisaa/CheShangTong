@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑资料"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <ImageButton
+            android:id="@id/saveguestdata"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_report_commitbutton" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/userinfo"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@id/type_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <RelativeLayout
+                android:id="@id/search_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="姓名"
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <EditText
+                    android:id="@id/editTextName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="48.0dip"
+                    android:layout_toRightOf="@id/name_tv"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="请输入客户姓名"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="17.0sp" />
+
+                <Button
+                    android:id="@id/btn_clear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignRight="@id/editTextName"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@drawable/input_box_clear"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/carguest_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_below="@id/search_ll"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="电话"
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <Button
+                    android:id="@id/namebtn_clear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15.0dip"
+                    android:background="@drawable/input_box_clear"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@id/carguestName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="48.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_toLeftOf="@id/namebtn_clear"
+                    android:layout_toRightOf="@id/tel_tv"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号"
+                    android:inputType="phone"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@id/login_processbar"
+                style="@style/newProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notbuy_ll"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15.0dip"
+                android:indeterminate="false"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

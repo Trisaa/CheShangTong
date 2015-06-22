@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="color_text_selected">#ff008cf8</item>
+    <item type="drawable" name="commentheadernormal">#fff6f6f6</item>
+    <item type="drawable" name="itemdarkgray">#ff0d456f</item>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="darkgray">#ffededed</item>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="silver">#00ffffff</item>
+</resources>

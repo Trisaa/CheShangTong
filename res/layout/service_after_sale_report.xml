@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff" >
+
+    <ProgressBar
+        android:id="@id/salereport_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@id/salereport_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@id/salereport_item_date"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="今天"
+                android:textColor="@android:color/black"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@id/firstindex"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:text="项目"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/secondindex"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:text="当天"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/thirdindex"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.0dip"
+                android:text="月总数/指标"
+                android:textColor="#ff444444"
+                android:textSize="18.0sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@id/viewgap"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#ffcccccc" />
+
+        <Button
+            android:id="@id/commitreport"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/btn_style_okbutton"
+            android:gravity="center"
+            android:text="立即汇报"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@id/fixreport"
+            android:layout_width="120.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_style_okbutton"
+            android:gravity="center"
+            android:text="补录"
+            android:textColor="#ffffffff"
+            android:textSize="18.0sp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@id/report_topline"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/devide_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lName_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="进厂"
+                    android:textColor="#ff333333"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/lYear_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/taici_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lYear_one"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:text="台"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/date_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="台"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/datetaici_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/date_one"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <View
+            android:id="@id/viewgap"
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dip"
+            android:background="#ffcccccc" />
+            
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lName_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:ellipsize="end"
+                    android:text="产值"
+                    android:singleLine="true"
+                    android:textColor="#ff333333"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/lYear_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/taici_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lYear_two"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/date_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/datetaici_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/date_two"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+            
+            <View
+            android:id="@id/viewgap"
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dip"
+            android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lName_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:ellipsize="end"
+                    android:text="保养"
+                    android:singleLine="true"
+                    android:textColor="#ff333333"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/lYear_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/taici_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lYear_three"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/date_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/datetaici_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/date_three"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+            
+            <View
+            android:id="@id/viewgap"
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dip"
+            android:background="#ffcccccc" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lName_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:ellipsize="end"
+                    android:text="机电"
+                    android:singleLine="true"
+                    android:textColor="#ff333333"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/lYear_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/taici_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lYear_four"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/date_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/datetaici_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/date_four"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/lName_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="索赔"
+                    android:textColor="#ff333333"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/lYear_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/taici_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/lYear_five"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:text="万"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/date_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20.0dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="台"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/datetaici_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/date_five"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="1"
+                    android:singleLine="true"
+                    android:textColor="@color/xubaocolor_radiobutton"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+            
+            <View
+            android:id="@id/viewgap"
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dip"
+            android:background="#ffcccccc" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

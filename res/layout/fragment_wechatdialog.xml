@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <TextView
+            android:id="@id/teamname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="微信对话"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/layout_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbg"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@id/editTextsearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/search_bar_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5.0dip"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <LinearLayout
+            android:id="@id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/search_bar_icon_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:text="搜索"
+                android:textColor="#ff9f9f9f"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/editTextsearch"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:background="@drawable/input_box_clear"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    <ListView 
+        android:id="@+id/wechat_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提醒设置"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userinfo"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@id/type_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@id/newmessage_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/userinfo_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="业务提醒"
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <ImageView
+                    android:id="@id/newmessageonoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:scaleType="matrix"
+                    android:src="@drawable/switch_ios_on" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/yewutext_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newmessage_ll"
+                android:layout_marginTop="3.0dip"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/yewutext_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="预约、询价、投诉、救援、抢客户等提醒"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/sound_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_below="@id/yewutext_ll"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/notice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="对话消息"
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <ImageView
+                    android:id="@id/soundonoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:scaleType="matrix"
+                    android:src="@drawable/switch_ios_on" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/chattext_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sound_ll"
+                android:layout_marginTop="3.0dip"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/chattext_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="微信对话提醒"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/shake_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_below="@id/chattext_ll"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/btn_style_setting_click_button"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/function_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="汇报提醒"
+                    android:textColor="#ff444444"
+                    android:textSize="17.0sp" />
+
+                <ImageView
+                    android:id="@id/shakeonoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.0dip"
+                    android:scaleType="matrix"
+                    android:src="@drawable/switch_ios_on" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/huibaotext_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shake_ll"
+                android:layout_marginTop="3.0dip"
+                android:clickable="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/huibaotext_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="销售汇报或售后汇报提醒"
+                    android:textColor="#ff9e9e9e"
+                    android:textSize="17.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="invisible" />
+
+</RelativeLayout>

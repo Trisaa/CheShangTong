@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/registerbg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@id/reply_topbar"
+        android:background="@drawable/headbg"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip">
+
+        <ImageButton
+            android:id="@id/reply_back"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/btn_style_gobackbutton"
+            android:layout_centerVertical="true" />
+
+        <RelativeLayout
+            android:id="@id/xiaoshou_top_selection_type"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:textSize="20.0dip"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:id="@id/reply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="试驾预约"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@id/main_top_more"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/downarrow"
+                android:layout_toRightOf="@id/reply_title"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.cheshangguanjia.view.XListView
+        android:id="@id/callListView"
+        android:scrollbars="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/reply_topbar" />
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:layout_centerInParent="true"
+        style="@style/newProgressBar" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/nodata_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90.0dip"
+        android:layout_below="@id/reply_topbar"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:textSize="20.0sp"
+            android:textColor="#ffdcdadb"
+            android:id="@id/reply_item_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noreply"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@id/nodata_iv"
+            android:layout_width="100.0dip"
+            android:layout_height="100.0dip"
+            android:layout_marginTop="15.0dip"
+            android:src="@drawable/nodata_image"
+            android:scaleType="fitXY"
+            android:layout_below="@id/reply_item_empty"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+</RelativeLayout>

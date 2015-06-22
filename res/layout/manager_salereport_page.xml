@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/salereport_viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24.0dip" >
+
+            <ImageView
+                android:id="@id/sale_left_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26.0dip"
+                android:src="@drawable/left_unarrow" />
+
+            <ImageView
+                android:id="@id/sale_right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="26.0dip"
+                android:src="@drawable/right_arrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

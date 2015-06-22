@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@id/salereport_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <RelativeLayout
+            android:id="@id/xiaoshou_top_selection_type"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="试驾预约"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp" />
+
+            <ImageView
+                android:id="@id/main_top_more"
+                android:layout_width="32.0dip"
+                android:layout_height="32.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_toRightOf="@id/name_tv"
+                android:src="@drawable/downarrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/sun_txt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="今天总人数12人"/>
+    <ListView 
+        android:id="@+id/qianke_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ListView>
+
+</LinearLayout>

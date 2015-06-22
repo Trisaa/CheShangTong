@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/registerbg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/headbg" >
+
+        <ImageButton
+            android:id="@id/goback"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:background="@null"
+            android:src="@drawable/btn_style_gobackbutton" />
+
+        <TextView
+            android:id="@id/titlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="续保询价详情"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/userpic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/usericon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/fix_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10.0dip"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@id/cancelbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_style_cancelbutton"
+            android:gravity="center"
+            android:text="设为无效"
+            android:textColor="#ff000000"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@id/okbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_style_okbutton"
+            android:gravity="center"
+            android:text="开始报价"
+            android:textColor="#ffffffff"
+            android:textSize="20.0sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fix_ll"
+        android:layout_below="@id/layout_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@id/type_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/gueststatus_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/fix_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="无效询价"
+                        android:textColor="#ffe79a42"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/yinsi_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/beizhu_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/status_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="跟进记录"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/beizhu_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:layout_toRightOf="@id/status_tv"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="添加跟进记录"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/direction" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/pic_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="询价人"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_toRightOf="@id/name"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@id/callphoneicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/btn_style_callphone_button" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/pricetimetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="询价时间"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/pricetime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/pricetimetv"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/carstyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车型 "
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/carstyle_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="43.0dip"
+                        android:layout_toRightOf="@id/carstyle"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/chepai_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/chepai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车牌号"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/chepai_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_toRightOf="@id/chepai"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/buytime_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/buytime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="购车时间"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/buytime_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/buytime"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/jiaoqiangxiao_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/jiaoqiangxiao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="交强险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/jiaoqiangxiao_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="28.0dip"
+                        android:layout_toRightOf="@id/jiaoqiangxiao"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="第三者责任险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/third_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40.0dip"
+                        android:layout_toRightOf="@id/third"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/chenyuanxian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车上人员责任险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/chenyuanxian_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_toRightOf="@id/chenyuanxian"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/chesun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车辆损失险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/chesun_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="58.0dip"
+                        android:layout_toRightOf="@id/chesun"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/qiangdao_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/qiangdao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="盗抢险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/qiangdao_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="92.0dip"
+                        android:layout_toRightOf="@id/qiangdao"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/boli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="玻璃单独破碎险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/boli_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_toRightOf="@id/boli"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/jinli_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/buji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="不计免赔特约险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/buji_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_toRightOf="@id/buji"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/ziran_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/ziran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="自燃险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/ziran_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="92.0dip"
+                        android:layout_toRightOf="@id/ziran"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/xinzen_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/xinzen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="新增设备损失险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/xinzen_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_toRightOf="@id/xinzen"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/jinshen_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/jinshen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="精神损害赔偿险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/jinshen_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="25.0dip"
+                        android:layout_toRightOf="@id/jinshen"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/huahen_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/huahen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="车身划痕险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/huahen_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="60.0dip"
+                        android:layout_toRightOf="@id/huahen"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@id/fadongji_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@id/fadongji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="发动机损失特约险"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/fadongji_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/fadongji"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/price_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/baojia_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/baojia_tvnull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:text=""
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/baojia_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:text="报价"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/weibaojia_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45.0dip"
+                        android:layout_marginTop="15.0dip"
+                        android:layout_toRightOf="@id/baojia_tv"
+                        android:paddingBottom="10.0dip"
+                        android:text="未报价"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@id/buystatus_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44.0dip"
+                    android:background="@drawable/btn_style_setting_click_button"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/buystatus_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:text="购买状态"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp" />
+
+                    <TextView
+                        android:id="@id/buy_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_toRightOf="@id/buystatus_tv"
+                        android:text="设为已购"
+                        android:textColor="#ff717171"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@id/buystatusarrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/direction" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@id/login_processbar"
+        style="@style/newProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="false"
+        android:visibility="gone" />
+
+</RelativeLayout>
